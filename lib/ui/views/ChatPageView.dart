@@ -4,6 +4,7 @@ import '../themes/Colors.dart' as MyColors;
 import '../themes/ThemeSettings.dart' as Settings;
 import '../widgets/ReceivedMessageWidget.dart';
 import '../widgets/SendedMessageWidget.dart';
+import 'ProfileView.dart';
 
 class ChatPageView extends StatefulWidget {
   final String username;
@@ -139,9 +140,22 @@ class _ChatPageViewState extends State<ChatPageView> {
                               child: ClipRRect(
                                 child: Container(
                                     child: SizedBox(
-                                      child: Image.asset(
-                                        "assets/images/person1.jpg",
-                                        fit: BoxFit.cover,
+                                      child: GestureDetector(
+                                        child: Image.asset(
+                                          "assets/images/person1.jpg",
+                                          fit: BoxFit.cover,
+                                        ),
+                                        onTap: () {
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (context) => ProfileView(
+                                                  username: "Jimi",
+                                                  image:
+                                                      "assets/images/person1.jpg"),
+                                            ),
+                                          );
+                                        },
                                       ),
                                     ),
                                     color: MyColors.orange),
@@ -155,10 +169,11 @@ class _ChatPageViewState extends State<ChatPageView> {
                                   color: Colors.white,
                                   boxShadow: [
                                     BoxShadow(
-                                        color: Colors.black26,
-                                        blurRadius: 5.0,
-                                        spreadRadius: -1,
-                                        offset: Offset(0.0, 5.0))
+                                      color: Colors.black26,
+                                      blurRadius: 5.0,
+                                      spreadRadius: -1,
+                                      offset: Offset(0.0, 5.0),
+                                    )
                                   ]),
                             ),
                           ),

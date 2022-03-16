@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 
-import '../themes/Colors.dart' as MyColors;
+//import '../themes/Colors.dart' as MyColors;
 import '../views/ChatPageView.dart';
 
 class ChatListViewItem extends StatelessWidget {
@@ -9,7 +9,6 @@ class ChatListViewItem extends StatelessWidget {
   final String name;
   final String lastMessage;
   final String time;
-  final bool hasUnreadMessage;
   final int newMesssageCount;
   const ChatListViewItem({
     Key key,
@@ -17,7 +16,6 @@ class ChatListViewItem extends StatelessWidget {
     this.name,
     this.lastMessage,
     this.time,
-    this.hasUnreadMessage,
     this.newMesssageCount,
   }) : super(key: key);
 
@@ -54,13 +52,13 @@ class ChatListViewItem extends StatelessWidget {
                         time,
                         style: TextStyle(fontSize: 12),
                       ),
-                      hasUnreadMessage
+                      newMesssageCount > 0
                           ? Container(
                               margin: const EdgeInsets.only(top: 5.0),
                               height: 18,
                               width: 18,
                               decoration: BoxDecoration(
-                                  color: MyColors.orange,
+                                  color: Color(0xFFB74093),
                                   borderRadius: BorderRadius.all(
                                     Radius.circular(25.0),
                                   )),

@@ -31,8 +31,8 @@ class _ChatListPageViewState extends State<ChatListPageView> {
     } else {
       return Container(
         child: Scaffold(
-          backgroundColor: Settings.isDarkMode
-                    ? Colors.grey[900] : MyColors.blue,
+          backgroundColor:
+              Settings.isDarkMode ? Colors.grey[900] : MyColors.blue,
           appBar: AppBar(
             elevation: 0,
             iconTheme: IconThemeData(
@@ -66,67 +66,67 @@ class _ChatListPageViewState extends State<ChatListPageView> {
               child: ListView(
                 children: <Widget>[
                   ChatListViewItem(
-                    hasUnreadMessage: true,
                     image: AssetImage('assets/images/person1.jpg'),
                     lastMessage:
                         "Lorem ipsum dolor sit amet. Sed pharetra ante a blandit ultrices.",
                     name: "Bree Jarvis",
                     newMesssageCount: 8,
-                    time: "19:27 PM",
+                    time: "19:27",
                   ),
                   ChatListViewItem(
-                    hasUnreadMessage: true,
                     image: AssetImage('assets/images/person2.png'),
                     lastMessage:
                         "Lorem ipsum dolor sit amet. Sed pharetra ante a blandit ultrices.",
                     name: "Alex",
                     newMesssageCount: 5,
-                    time: "19:27 PM",
+                    time: "19:27",
                   ),
                   ChatListViewItem(
-                    hasUnreadMessage: false,
                     image: AssetImage('assets/images/person3.jpg'),
                     lastMessage:
                         "Lorem ipsum dolor sit amet. Sed pharetra ante a blandit ultrices.",
                     name: "Carson Sinclair",
                     newMesssageCount: 0,
-                    time: "19:27 PM",
+                    time: "19:27",
                   ),
                   ChatListViewItem(
-                    hasUnreadMessage: false,
                     image: AssetImage('assets/images/person4.png'),
                     lastMessage:
                         "Lorem ipsum dolor sit amet. Sed pharetra ante a blandit ultrices.",
                     name: "Lucian Guerra",
                     newMesssageCount: 0,
-                    time: "19:27 PM",
+                    time: "19:27",
                   ),
                   ChatListViewItem(
-                    hasUnreadMessage: false,
                     image: AssetImage('assets/images/person5.jpg'),
                     lastMessage:
                         "Lorem ipsum dolor sit amet. Sed pharetra ante a blandit ultrices.",
                     name: "Sophia-Rose Bush",
                     newMesssageCount: 0,
-                    time: "19:27 PM",
+                    time: "19:27",
                   ),
                   ChatListViewItem(
-                    hasUnreadMessage: false,
                     image: AssetImage('assets/images/person6.jpg'),
                     lastMessage:
                         "Lorem ipsum dolor sit amet. Sed pharetra ante a blandit ultrices.",
                     name: "Mohammad",
                     newMesssageCount: 0,
-                    time: "19:27 PM",
+                    time: "19:27",
                   ),
                   ChatListViewItem(
-                    hasUnreadMessage: false,
                     image: AssetImage('assets/images/person7.jpg'),
                     lastMessage:
                         "Lorem ipsum dolor sit amet. Sed pharetra ante a blandit ultrices.",
                     name: "Jimi Cooke",
                     newMesssageCount: 0,
-                    time: "19:27 PM",
+                    time: "19:27",
+                  ),
+                  ChatListViewItem(
+                    image: AssetImage('assets/images/Profile.jpg'),
+                    lastMessage: "Olá",
+                    name: "Daniel Dias",
+                    newMesssageCount: 1,
+                    time: "15:00",
                   ),
                 ],
               ),
